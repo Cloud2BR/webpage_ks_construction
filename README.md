@@ -1,4 +1,4 @@
-# K&S Construction and Cabinets LLC — Website
+# K&S Construction and Cabinets LLC — Web Portal
 
 Atlanta, USA
 
@@ -40,7 +40,7 @@ This is a fully static, responsive marketing website featuring:
 ## File Structure
 
 ```
-webpage_ks_construction/
+ks_construction-webportal/
 ├── assets/
 │   └── images/
 │       ├── ks-brand-cover.png
