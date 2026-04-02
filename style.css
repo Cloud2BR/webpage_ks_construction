@@ -369,17 +369,25 @@ input, select, textarea { font-family: inherit; }
   padding: 44px 24px;
   position: relative;
 }
-.stat-num {
+.stat-value {
   display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-num {
+  display: inline;
   font-family: var(--font-display);
   font-size: 3.2rem;
   color: var(--gold);
   line-height: 1;
 }
 .stat-suffix {
+  display: inline;
   font-family: var(--font-display);
   font-size: 2rem;
   color: var(--gold);
+  line-height: 1;
+  vertical-align: baseline;
 }
 .stat p {
   font-size: 0.82rem;
@@ -1006,6 +1014,7 @@ input, select, textarea { font-family: inherit; }
   .section-title { font-size: clamp(2rem, 9vw, 2.8rem); }
 
   .stats-strip .stat-num { font-size: 2rem; }
+  .stats-strip .stat-suffix { font-size: 1.6rem; }
 
   .service-card { padding: 24px 20px; }
 
