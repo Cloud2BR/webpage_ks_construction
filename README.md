@@ -48,16 +48,22 @@ webpage_ks_construction/
 
 ## Usage
 
-Open `index.html` directly in any browser — no build step or server required.
+> This site is set up to publish through GitHub Pages using `.github/workflows/deploy-pages.yml`
 
-To connect the contact form to a real backend, replace the `setTimeout` simulation inside `script.js` with a `fetch` call to your endpoint (e.g., [Formspree](https://formspree.io), your own API, etc.).
+- Push changes to `main` to trigger the deployment workflow.
+- Make sure the repository Pages source is set to GitHub Actions.
+- For local preview during development, open `index.html` directly in a browser.
+
+
+> [!NOTE]
+> To connect the contact form to a real backend, replace the `setTimeout` simulation inside `script.js` with a `fetch` call to your endpoint, for example Formspree or your own API.
 
 ## Customization
 
-- **Phone / Email / Address** — update the contact details in `index.html` inside the `.contact-details` list.
-- **Project images** — replace the CSS gradient placeholders (`.project-img-1` → `.project-img-4`) with real `background-image` URLs.
-- **Stats numbers** — update the `data-target` attributes on `.stat-num` elements in `index.html`.
-- **Testimonials** — edit or add `.testimonial-card` blocks in `index.html`.
+- **Phone / Email / Address**: update the contact details in `index.html` inside the `.contact-details` list.
+- **Project images**: replace the CSS gradient placeholders (`.project-img-1` → `.project-img-4`) with real `background-image` URLs.
+- **Stats numbers**: update the `data-target` attributes on `.stat-num` elements in `index.html`.
+- **Testimonials**: edit or add `.testimonial-card` blocks in `index.html`.
 
 ## Social
 
