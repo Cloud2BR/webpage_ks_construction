@@ -175,7 +175,7 @@
       // Simulate async send (replace with real fetch to backend/formspree)
       setTimeout(() => {
         btn.textContent = '✓ Message Sent!';
-        btn.style.background = '#2a7a2a';
+        btn.style.background = '#09b44b';
         form.reset();
 
         setTimeout(() => {

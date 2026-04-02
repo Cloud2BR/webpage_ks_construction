@@ -1,6 +1,6 @@
 # K&S Construction Cabinets LLC — Website
 
-Atlanta, USA
+Orlando, Florida, USA
 
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
@@ -9,7 +9,7 @@ Last updated: 2026-04-02
 
 ----------
 
-> A modern, elegant single-page website for **KS Construction**, a professional construction company. Built with vanilla HTML, CSS, and JavaScript, no frameworks, no dependencies.
+> A modern, elegant single-page website for **K&S Construction Cabinets LLC**, an Orlando contractor focused on cabinet installation, custom cabinets, kitchen remodeling, built-ins, and carpentry. Built with vanilla HTML, CSS, and JavaScript, no frameworks, no dependencies.
 
 ## Overview
 
