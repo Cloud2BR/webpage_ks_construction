@@ -620,43 +620,19 @@ input, select, textarea { font-family: inherit; }
 .project-card.tall .project-img { height: 100%; min-height: 300px; }
 .project-card.wide .project-img { height: 250px; }
 
-/* Gradient placeholders mimicking construction photos */
-.project-img-1 {
-  background:
-    linear-gradient(160deg, #1a1208 0%, #2d2010 40%, #0f0d0a 100%);
-}
-.project-img-1::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect x='10' y='30' width='60' height='45' fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='1.5'/%3E%3Cpath d='M10 30 L40 10 L70 30' fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='1.5'/%3E%3Crect x='30' y='50' width='20' height='25' fill='none' stroke='rgba(201,168,76,0.1)' stroke-width='1'/%3E%3C/svg%3E") center/50% no-repeat;
-}
-.project-img-2 {
-  background: linear-gradient(160deg, #0d1218 0%, #141e2a 50%, #080c10 100%);
-}
-.project-img-2::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='60' viewBox='0 0 80 60'%3E%3Crect x='5' y='15' width='70' height='42' fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='1.5'/%3E%3Cline x1='25' y1='15' x2='25' y2='57' stroke='rgba(201,168,76,0.1)' stroke-width='1'/%3E%3Cline x1='55' y1='15' x2='55' y2='57' stroke='rgba(201,168,76,0.1)' stroke-width='1'/%3E%3Crect x='5' y='5' width='70' height='10' fill='none' stroke='rgba(201,168,76,0.08)' stroke-width='1'/%3E%3C/svg%3E") center/60% no-repeat;
-}
-.project-img-3 {
-  background: linear-gradient(160deg, #101510 0%, #1a251a 50%, #0a100a 100%);
-}
-.project-img-3::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='60' viewBox='0 0 80 60'%3E%3Crect x='0' y='40' width='80' height='4' fill='rgba(201,168,76,0.1)'/%3E%3Crect x='0' y='48' width='80' height='4' fill='rgba(201,168,76,0.08)'/%3E%3Cpath d='M10 40 Q20 20 30 40 Q40 20 50 40 Q60 20 70 40' fill='none' stroke='rgba(201,168,76,0.15)' stroke-width='1.5'/%3E%3C/svg%3E") center/80% no-repeat;
-}
+/* Project images — real photos set via inline styles */
+.project-img-1,
+.project-img-2,
+.project-img-3,
 .project-img-4 {
-  background: linear-gradient(160deg, #120d18 0%, #1e1425 50%, #0d0910 100%);
+  background-size: cover;
+  background-position: center;
 }
+.project-img-1::after,
+.project-img-2::after,
+.project-img-3::after,
 .project-img-4::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Crect x='5' y='15' width='50' height='42' fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='1.5'/%3E%3Crect x='65' y='25' width='50' height='32' fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='1.5'/%3E%3Cpath d='M5 15 L30 5 L55 15' fill='none' stroke='rgba(201,168,76,0.1)' stroke-width='1'/%3E%3C/svg%3E") center/70% no-repeat;
+  display: none;
 }
 
 .project-info {
@@ -1287,36 +1263,20 @@ body {
   color: var(--gold-dark);
 }
 
-.project-img-1 {
-  background: linear-gradient(160deg, #eef6f0 0%, #d8ebde 100%);
-}
-
-.project-img-1::after {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cpath d='M15 70V35L45 15l30 20v35H57V48H33v22H15Z' fill='none' stroke='%23071B33' stroke-width='2'/%3E%3Crect x='41' y='60' width='8' height='8' fill='%2309B44B'/%3E%3C/svg%3E") center/52% no-repeat;
-}
-
-.project-img-2 {
-  background: linear-gradient(160deg, #f4f8fb 0%, #dfe8f1 100%);
-}
-
-.project-img-2::after {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='72' viewBox='0 0 90 72'%3E%3Crect x='12' y='18' width='66' height='42' fill='none' stroke='%23071B33' stroke-width='2'/%3E%3Cpath d='M12 30h66M34 18v42M56 18v42' stroke='%2309B44B' stroke-width='1.5'/%3E%3C/svg%3E") center/58% no-repeat;
-}
-
-.project-img-3 {
-  background: linear-gradient(160deg, #f1f7f3 0%, #d9eadf 100%);
-}
-
-.project-img-3::after {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='72' viewBox='0 0 96 72'%3E%3Cpath d='M8 54h80' stroke='%2309B44B' stroke-width='2'/%3E%3Cpath d='M12 54Q24 28 36 54Q48 28 60 54Q72 28 84 54' fill='none' stroke='%23071B33' stroke-width='2'/%3E%3C/svg%3E") center/72% no-repeat;
-}
-
+/* Project images — using real project photos (brand refresh) */
+.project-img-1,
+.project-img-2,
+.project-img-3,
 .project-img-4 {
-  background: linear-gradient(160deg, #f6f8f8 0%, #e1ebe5 100%);
+  background-size: cover;
+  background-position: center;
 }
 
+.project-img-1::after,
+.project-img-2::after,
+.project-img-3::after,
 .project-img-4::after {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='76' viewBox='0 0 120 76'%3E%3Crect x='10' y='28' width='30' height='34' fill='none' stroke='%23071B33' stroke-width='2'/%3E%3Cpath d='M10 28L25 16l15 12' fill='none' stroke='%23071B33' stroke-width='2'/%3E%3Crect x='54' y='20' width='34' height='42' fill='none' stroke='%2309B44B' stroke-width='2'/%3E%3Cpath d='M54 20L71 8l17 12' fill='none' stroke='%2309B44B' stroke-width='2'/%3E%3C/svg%3E") center/68% no-repeat;
+  display: none;
 }
 
 .project-tag {
