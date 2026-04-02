@@ -13,6 +13,27 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // ── SCROLL PROGRESS BAR ───────────────────────
+  const progressBar = document.getElementById('scrollProgress');
+  const backToTop   = document.getElementById('backToTop');
+
+  const updateScrollUI = () => {
+    const scrolled = window.scrollY;
+    const total    = document.documentElement.scrollHeight - window.innerHeight;
+    const pct      = total > 0 ? (scrolled / total) * 100 : 0;
+    if (progressBar) progressBar.style.width = pct + '%';
+    if (backToTop)   backToTop.classList.toggle('visible', scrolled > 400);
+  };
+  window.addEventListener('scroll', updateScrollUI, { passive: true });
+  updateScrollUI();
+
+  // ── BACK TO TOP ───────────────────────────────
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // ── HAMBURGER ──────────────────────────────────
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -152,38 +173,54 @@
     renderPage();
   }
 
-  // ── CONTACT FORM ──────────────────────────────
+  // ── CONTACT FORM → MAILTO ─────────────────────
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
 
-      const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-
       // Basic client-side validation
-      const email = form.querySelector('#email');
+      const emailField = form.querySelector('#email');
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email.value.trim())) {
-        showFieldError(email, 'Please enter a valid email address.');
+      if (!emailRegex.test(emailField.value.trim())) {
+        showFieldError(emailField, 'Please enter a valid email address.');
         return;
       }
 
-      btn.textContent = 'Sending…';
+      const fname   = (form.querySelector('#fname').value   || '').trim();
+      const lname   = (form.querySelector('#lname').value   || '').trim();
+      const email   = (form.querySelector('#email').value   || '').trim();
+      const phone   = (form.querySelector('#phone').value   || '').trim();
+      const service = (form.querySelector('#service').value || '').trim();
+      const message = (form.querySelector('#message').value || '').trim();
+
+      const subject = encodeURIComponent(
+        `Estimate Request: ${service || 'General Inquiry'} – ${fname} ${lname}`
+      );
+
+      const body = encodeURIComponent(
+        `Name: ${fname} ${lname}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone || 'Not provided'}\n` +
+        `Service: ${service || 'Not specified'}\n\n` +
+        `Message:\n${message}`
+      );
+
+      window.location.href =
+        `mailto:construction.ks20@gmail.com?subject=${subject}&body=${body}`;
+
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = '✓ Opening your email app…';
+      btn.style.background = '#09b44b';
       btn.disabled = true;
 
-      // Simulate async send (replace with real fetch to backend/formspree)
       setTimeout(() => {
-        btn.textContent = '✓ Message Sent!';
-        btn.style.background = '#09b44b';
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
         form.reset();
-
-        setTimeout(() => {
-          btn.textContent = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 4000);
-      }, 1200);
+      }, 4000);
     });
 
     // Clear errors on input
