@@ -1,45 +1,71 @@
-# org-repo-template
+# KS Construction — Website
 
 Atlanta, USA
 
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2026-04-01
+Last updated: 2026-04-02
 
 ----------
 
-> Organizational repo template with automated pipelines (update date, update counter, notebook/markdown review, formatting checks, etc). Includes a general README structure with preferred header and counter badge. Ensures consistency, automation, and best practices across all org projects.
+> A modern, elegant single-page website for **KS Construction**, a professional construction company. Built with vanilla HTML, CSS, and JavaScript, no frameworks, no dependencies.
 
-## Workflow Summary
+## Overview
 
-| Workflow | Trigger | What it does |
-| --- | --- | --- |
-| `.github/workflows/validate_and_fix_markdown.yml` | Pull requests to `main` | Runs `markdownlint`, auto-fixes Markdown style issues when possible, validates the required header block for every tracked Markdown file, and pushes any fixes back to the PR branch. |
-| `.github/workflows/update-md-date.yml` | Pull requests to `main` | Looks at the full PR diff, updates the `Last updated:` line inside the standard Markdown header block for changed Markdown files, and pushes the result back to the PR branch. |
-| `.github/workflows/validate_and_fix_notebook.yml` | Pull requests to `main` | Validates Jupyter notebooks, normalizes widget metadata when needed, and commits notebook-format fixes back to the PR branch. |
-| `.github/workflows/use-visitor-counter.yml` | Pull requests to `main` and manual runs | Runs the vendored visitor-counter script stored in this repo to refresh Markdown counter badges and `metrics.json`, then commits the updated repository traffic data. |
+This is a fully static, responsive marketing website featuring:
 
-## Required Markdown Header
+- Fixed frosted-glass navbar with mobile hamburger menu
+- Full-viewport hero section with animated scroll indicator
+- Animated stats counter strip (projects, years, satisfaction, team)
+- Services grid with hover animations
+- About section with a years-of-experience badge
+- Masonry-style project portfolio grid
+- Testimonials carousel with pagination
+- Contact form with client-side validation
+- Responsive footer with navigation and social links
 
-> Within this org, every tracked Markdown file must include the following block immediately below the main `# Title` line. The location line can vary, but it must exist. The GitHub badge line, the `brown9804` profile line, the date format, and the separator are org-wide standard and must match this structure exactly. The `Validate and Fix Markdown` workflow checks every tracked `.md` file against this header pattern on pull requests.
+## Branding
 
-```md
-# Document Title
+| Token | Value |
+| --- | --- |
+| Primary Gold | `#C9A84C` |
+| Background | `#0B0B0B` |
+| Surface | `#1A1A1A` |
+| Text | `#E0E0E0` |
+| Display Font | Bebas Neue |
+| Body Font | Inter |
 
-City, Country
+## File Structure
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
-
-Last updated: YYYY-MM-DD
-
-----------
 ```
+webpage_ks_construction/
+├── index.html   # Full page markup
+├── style.css    # All styles (CSS custom properties, responsive)
+├── script.js    # Navbar scroll, counters, carousel, form validation
+└── README.md
+```
+
+## Usage
+
+Open `index.html` directly in any browser — no build step or server required.
+
+To connect the contact form to a real backend, replace the `setTimeout` simulation inside `script.js` with a `fetch` call to your endpoint (e.g., [Formspree](https://formspree.io), your own API, etc.).
+
+## Customization
+
+- **Phone / Email / Address** — update the contact details in `index.html` inside the `.contact-details` list.
+- **Project images** — replace the CSS gradient placeholders (`.project-img-1` → `.project-img-4`) with real `background-image` URLs.
+- **Stats numbers** — update the `data-target` attributes on `.stat-num` elements in `index.html`.
+- **Testimonials** — edit or add `.testimonial-card` blocks in `index.html`.
+
+## Social
+
+Instagram: [@ks_construction_](https://www.instagram.com/ks_construction_/)
 
 <!-- START BADGE -->
 <div align="center">
   <img src="https://img.shields.io/badge/Total%20views-1580-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-04-01</p>
+  <p>Refresh Date: 2026-04-02</p>
 </div>
 <!-- END BADGE -->
