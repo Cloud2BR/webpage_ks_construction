@@ -199,11 +199,24 @@
       );
 
       const body = encodeURIComponent(
-        `Name: ${fname} ${lname}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone || 'Not provided'}\n` +
-        `Service: ${service || 'Not specified'}\n\n` +
-        `Message:\n${message}`
+        `════════════════════════════════\n` +
+        `  NEW ESTIMATE REQUEST\n` +
+        `  K&S Construction and Cabinets LLC\n` +
+        `════════════════════════════════\n\n` +
+        `CONTACT INFORMATION\n` +
+        `────────────────────\n` +
+        `  Name:    ${fname} ${lname}\n` +
+        `  Email:   ${email}\n` +
+        `  Phone:   ${phone || 'Not provided'}\n\n` +
+        `SERVICE REQUESTED\n` +
+        `────────────────────\n` +
+        `  ${service || 'Not specified'}\n\n` +
+        `PROJECT DETAILS\n` +
+        `────────────────────\n` +
+        `  ${message}\n\n` +
+        `════════════════════════════════\n` +
+        `  Sent via ksconstruction.com\n` +
+        `════════════════════════════════`
       );
 
       window.location.href =
