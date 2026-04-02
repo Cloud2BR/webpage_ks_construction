@@ -459,6 +459,43 @@
     </div>
   </footer>
 
+  <!-- ── AI CHAT WIDGET ── -->
+  <div class="ai-widget" id="aiWidget">
+    <div class="ai-widget-panel" id="aiWidgetPanel" role="dialog" aria-label="Chat with AI about our services">
+      <p class="ai-widget-heading">Ask AI about our services</p>
+      <p class="ai-widget-hint">Opens your preferred AI with a question about K&amp;S already loaded.</p>
+      <a class="ai-option ai-copilot"
+         href="https://copilot.microsoft.com/?q=I%27m+interested+in+K%26S+Construction+and+Cabinets+LLC%2C+a+cabinet+installation+company+in+Orlando%2C+Florida.+Can+you+help+me+learn+more+about+their+services+including+kitchen+cabinets%2C+entertainment+walls%2C+bathroom+cabinets%2C+and+remodeling%3F"
+         target="_blank" rel="noopener noreferrer" aria-label="Open Microsoft Copilot">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/></svg>
+        <span>Microsoft Copilot</span>
+      </a>
+      <a class="ai-option ai-chatgpt"
+         href="https://chatgpt.com/?q=I%27m+interested+in+K%26S+Construction+and+Cabinets+LLC%2C+a+cabinet+installation+company+in+Orlando%2C+Florida.+Can+you+help+me+learn+more+about+their+services+including+kitchen+cabinets%2C+entertainment+walls%2C+bathroom+cabinets%2C+and+remodeling%3F"
+         target="_blank" rel="noopener noreferrer" aria-label="Open ChatGPT">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.7 8.5a6.5 6.5 0 0 0-.6-5.3A6.7 6.7 0 0 0 12.9 0a6.5 6.5 0 0 0-4.9 2.2A6.5 6.5 0 0 0 3.3 4.5a6.7 6.7 0 0 0-.9 5 6.5 6.5 0 0 0-1 3.7 6.7 6.7 0 0 0 4 6.1 6.5 6.5 0 0 0 .6 5.3 6.7 6.7 0 0 0 7.2 3.2 6.5 6.5 0 0 0 4.9-2.2 6.5 6.5 0 0 0 4.7-2.3 6.7 6.7 0 0 0 .9-5 6.5 6.5 0 0 0 1-3.7 6.7 6.7 0 0 0-4-6.1zM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z" fill="currentColor"/></svg>
+        <span>ChatGPT</span>
+      </a>
+      <a class="ai-option ai-claude"
+         href="https://claude.ai/new?q=I%27m+interested+in+K%26S+Construction+and+Cabinets+LLC%2C+a+cabinet+installation+company+in+Orlando%2C+Florida.+Can+you+help+me+learn+more+about+their+services+including+kitchen+cabinets%2C+entertainment+walls%2C+bathroom+cabinets%2C+and+remodeling%3F"
+         target="_blank" rel="noopener noreferrer" aria-label="Open Claude">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L4 8v8l8 5 8-5V8l-8-5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/></svg>
+        <span>Claude</span>
+      </a>
+    </div>
+    <button class="ai-widget-toggle" id="aiWidgetToggle" aria-label="Ask AI about our services" aria-expanded="false">
+      <svg class="ai-icon-default" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.5 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zM14.5 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zM3 7.5A.5.5 0 0 1 3.5 7h1a.5.5 0 0 1 0 1h-1A.5.5 0 0 1 3 7.5zM19 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" fill="currentColor"/>
+        <rect x="5" y="4" width="14" height="12" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/>
+        <path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M9 16v3l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="ai-icon-close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
   <!-- ── BACK TO TOP ── -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -215,7 +215,8 @@
         `────────────────────\n` +
         `  ${message}\n\n` +
         `════════════════════════════════\n` +
-        `  Sent via ksconstruction.com\n` +
+        `  K&S Construction and Cabinets LLC\n` +
+        `  Website Automation\n` +
         `════════════════════════════════`
       );
 
@@ -270,5 +271,24 @@
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
+  // ── AI CHAT WIDGET ────────────────────────────
+  const aiWidget = document.getElementById('aiWidget');
+  const aiToggle = document.getElementById('aiWidgetToggle');
+
+  if (aiWidget && aiToggle) {
+    aiToggle.addEventListener('click', () => {
+      const isOpen = aiWidget.classList.toggle('open');
+      aiToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', e => {
+      if (!aiWidget.contains(e.target)) {
+        aiWidget.classList.remove('open');
+        aiToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
 })();
