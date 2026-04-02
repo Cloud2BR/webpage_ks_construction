@@ -1,4 +1,4 @@
-# K&S Construction Cabinets LLC — Website
+# K&S Construction and Cabinets LLC — Website
 
 Orlando, Florida, USA
 
@@ -9,7 +9,7 @@ Last updated: 2026-04-02
 
 ----------
 
-> A modern, elegant single-page website for **K&S Construction Cabinets LLC**, an Orlando contractor focused on cabinet installation, custom cabinets, kitchen remodeling, built-ins, and carpentry. Built with vanilla HTML, CSS, and JavaScript, no frameworks, no dependencies.
+> A modern, elegant single-page website for **K&S Construction and Cabinets LLC**, an Orlando contractor specializing in cabinet installation with 12 years of experience and 1,600+ installations. Built with vanilla HTML, CSS, and JavaScript, no frameworks, no dependencies.
 
 ## Overview
 
@@ -17,10 +17,10 @@ This is a fully static, responsive marketing website featuring:
 
 - Fixed frosted-glass navbar with mobile hamburger menu
 - Full-viewport hero section with animated scroll indicator
-- Animated stats counter strip (projects, years, satisfaction, team)
-- Services grid with hover animations
-- About section with a years-of-experience badge
-- Masonry-style project portfolio grid
+- Animated stats counter strip (1,600+ installs, 12 years, satisfaction, growth)
+- Services grid with hover animations (kitchens, bathrooms, entertainment, drop zones, dining, crown molding)
+- About section with credentials (General Liability, W-9 available)
+- Masonry-style project portfolio grid with real project images
 - Testimonials carousel with pagination
 - Contact form with client-side validation
 - Responsive footer with navigation and social links
@@ -29,10 +29,11 @@ This is a fully static, responsive marketing website featuring:
 
 | Token | Value |
 | --- | --- |
-| Primary Gold | `#C9A84C` |
-| Background | `#0B0B0B` |
-| Surface | `#1A1A1A` |
-| Text | `#E0E0E0` |
+| Primary Green | `#09B44B` |
+| Charcoal | `#27302C` |
+| Navy | `#071B33` |
+| Background | `#FFFFFF` |
+| Text | `#27302C` |
 | Display Font | Bebas Neue |
 | Body Font | Inter |
 
@@ -40,6 +41,20 @@ This is a fully static, responsive marketing website featuring:
 
 ```
 webpage_ks_construction/
+├── assets/
+│   └── images/
+│       ├── ks-brand-cover.png
+│       ├── portfolio-intro.png
+│       ├── our-services.png
+│       ├── experience.png
+│       ├── projects-grid.png
+│       └── contact-info.png
+├── .github/
+│   ├── workflows/
+│   │   ├── deploy-pages.yml
+│   │   └── use-visitor-counter.yml
+│   └── scripts/
+│       └── update_visitor_counter.js
 ├── index.html   # Full page markup
 ├── style.css    # All styles (CSS custom properties, responsive)
 ├── script.js    # Navbar scroll, counters, carousel, form validation
@@ -61,7 +76,7 @@ webpage_ks_construction/
 ## Customization
 
 - **Phone / Email / Address**: update the contact details in `index.html` inside the `.contact-details` list.
-- **Project images**: replace the CSS gradient placeholders (`.project-img-1` → `.project-img-4`) with real `background-image` URLs.
+- **Project images**: replace project card inline `background-image` URLs or update files in `assets/images/`.
 - **Stats numbers**: update the `data-target` attributes on `.stat-num` elements in `index.html`.
 - **Testimonials**: edit or add `.testimonial-card` blocks in `index.html`.
 
